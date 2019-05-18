@@ -1,0 +1,607 @@
+{
+  "items": [
+    {
+      "id": "set_timezone",
+      "title": "Set Australian Timezone",
+      "status": "shipped",
+      "desc": "Set the timezone in Australia your transactions appear in.",
+      "section": "profile"
+    },
+    {
+      "id": "update_email",
+      "title": "Update email address",
+      "status": "shipped",
+      "desc": "Update and confirm your email address with Up.",
+      "section": "profile"
+    },
+    {
+      "id": "update_phone",
+      "title": "Update phone number",
+      "status": "shipped",
+      "desc": "Update and confirm your phone number with Up.",
+      "section": "profile"
+    },
+    {
+      "id": "update_address",
+      "title": "Update postal address",
+      "status": "in development",
+      "desc": "Update your postal address",
+      "section": "profile"
+    },
+    {
+      "id": "update_avatar",
+      "title": "Update profile picture",
+      "status": "planned",
+      "desc": "Set and change your profile pic",
+      "section": "profile"
+    },
+    {
+      "id": "close_account",
+      "title": "Close your Up account",
+      "status": "planned",
+      "desc": "Close your Up account &#128546;",
+      "section": "profile"
+    },
+    {
+      "id": "applepay",
+      "title": "Apple Pay",
+      "status": "shipped",
+      "desc": "Use your iPhone or Apple Watch to make purchases.",
+      "section": "cards"
+    },
+    {
+      "id": "applepay_instant",
+      "title": "Apple Pay - Instant Provisioning",
+      "status": "shipped",
+      "desc": "Set up Apple Pay before your card arrives.",
+      "section": "cards"
+    },
+    {
+      "id": "googlepay",
+      "title": "Google Pay",
+      "status": "shipped",
+      "desc": "Use your Android device to make purchases.",
+      "section": "cards"
+    },
+    {
+      "id": "googlepay_instant",
+      "title": "Google Pay - Instant Provisioning",
+      "status": "in development",
+      "desc": "Set up Google Pay before your card arrives.",
+      "estimate": "2019q2",
+      "demand": "high",
+      "section": "cards"
+    },
+    {
+      "id": "fitbitpay",
+      "title": "Fitbit Pay",
+      "status": "shipped",
+      "desc": "Use your supported Fitbit device to make purchases.",
+      "section": "cards"
+    },
+    {
+      "id": "garminpay",
+      "title": "Garmin Pay",
+      "status": "shipped",
+      "desc": "Use your supported Garmin device to make purchases.",
+      "section": "cards"
+    },
+    {
+      "id": "samsungpay",
+      "title": "Samsung Pay",
+      "status": "shipped",
+      "desc": "Use your supported Samsung device to make purchases.",
+      "section": "cards"
+    },
+    {
+      "id": "block_card",
+      "title": "Block Card",
+      "status": "shipped",
+      "desc": "Activate or Deactivate your card from the Up app.",
+      "section": "cards"
+    },
+    {
+      "id": "card_controls",
+      "title": "Card Controls",
+      "status": "shipped",
+      "desc": "Fine-grained control over how your Up card can be used.",
+      "section": "cards"
+    },
+    {
+      "id": "report_card",
+      "title": "Report card lost/stolen",
+      "status": "in development",
+      "desc": "Ability to use the app to report your card as lost or stolen and have a new card issued.",
+      "section": "cards"
+    },
+    {
+      "id": "virtual_cards",
+      "title": "Virtual Cards",
+      "status": "planned",
+      "desc": "Create single-use or per-merchant card numbers.",
+      "demand": "med",
+      "section": "cards"
+    },
+    {
+      "id": "card_details",
+      "title": "In-app Card Details",
+      "status": "planned",
+      "desc": "View your card number, expiry and CVV from the Up app.",
+      "estimate": "2019q3",
+      "demand": "med",
+      "section": "cards"
+    },
+    {
+      "id": "transactional_account",
+      "title": "Transactional",
+      "status": "shipped",
+      "desc": "A transaction account with no monthly fees and a attached debit card.",
+      "section": "accounts"
+    },
+    {
+      "id": "additional_accounts",
+      "title": "Additional Accounts",
+      "status": "planned",
+      "desc": "Ability to create addition transactional accounts.",
+      "demand": "high",
+      "section": "accounts"
+    },
+    {
+      "id": "joint_accounts",
+      "title": "Joint Accounts",
+      "status": "planned",
+      "desc": "Ability to create an account shared by two people.",
+      "demand": "high",
+      "section": "accounts"
+    },
+    {
+      "id": "shared_accounts",
+      "title": "Shared Accounts",
+      "status": "planned",
+      "desc": "Ability to create an account shared by two or more people.",
+      "estimate": "",
+      "demand": "high",
+      "section": "accounts"
+    },
+    {
+      "id": "high_interest_saver",
+      "title": "High-Interest Saver",
+      "status": "shipped",
+      "desc": "Savings account with no monthly fees and competitive rate.",
+      "section": "accounts"
+    },
+    {
+      "id": "shared_savers",
+      "title": "Shared Savers",
+      "status": "planned",
+      "desc": "Ability to create a Saver shared by two or more people.",
+      "demand": "med",
+      "section": "accounts"
+    },
+    {
+      "id": "roundups",
+      "title": "Round-ups",
+      "status": "shipped",
+      "desc": "Round up purchases to the nearest dollar and save the change.",
+      "section": "accounts"
+    },
+    {
+      "id": "roundup_options",
+      "title": "Round-up Options",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Configure round-ups to round up larger amounts as well as whole-dollar purchases.",
+      "section": "accounts"
+    },
+    {
+      "id": "linked_roundups",
+      "title": "Linked Account Round-ups",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Round up to external accounts like your mortgage or credit card.",
+      "section": "accounts"
+    },
+    {
+      "id": "deposit_withdrawal",
+      "title": "Deposit & Withdrawals",
+      "status": "shipped",
+      "desc": "Deposit and withdraw money from a Saver.",
+      "section": "accounts"
+    },
+    {
+      "id": "transfer_between",
+      "title": "Transfer Between Savers",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Transfer money directly between Savers.",
+      "section": "accounts"
+    },
+    {
+      "id": "automated_transfers",
+      "title": "Automated Transfers",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Set up an automated savings plan for each Saver.",
+      "section": "accounts"
+    },
+    {
+      "id": "payanyone",
+      "title": "Pay Anyone",
+      "status": "shipped",
+      "desc": "Make payments to other bank accounts via standard bank transfer (sometimes called direct entry).",
+      "section": "payments"
+    },
+    {
+      "id": "osko",
+      "title": "Osko Payments",
+      "status": "shipped",
+      "desc": "Make payments via the new, near real-time Osko payments network.",
+      "section": "payments"
+    },
+    {
+      "id": "scheduled_payments",
+      "title": "Scheduled Payments",
+      "status": "in development",
+      "estimate": "2019q2",
+      "desc": "Schedule a date in the future for a payment to be sent.",
+      "section": "payments"
+    },
+    {
+      "id": "recurring_payments",
+      "title": "Recurring Payments",
+      "status": "in development",
+      "estimate": "2019q2",
+      "desc": "Set up payments that repeat at a given frequency",
+      "section": "payments"
+    },
+    {
+      "id": "pay_phone_contacts",
+      "title": "Pay Phone Contacts",
+      "status": "shipped",
+      "desc": "Create payments to contacts from your phone's address book",
+      "section": "payments"
+    },
+    {
+      "id": "contacts_on_up",
+      "title": "Contacts on Up",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Use your phone's address book to find friends on Up or be notified when they join.",
+      "section": "payments"
+    },
+    {
+      "id": "register_payids",
+      "title": "Register PayIDs",
+      "status": "shipped",
+      "desc": "Register your email and phone number as PayIDs on Up.",
+      "section": "payments"
+    },
+    {
+      "id": "generated_payid",
+      "title": "Generated PayID",
+      "status": "shipped",
+      "desc": "A PayID provided on sign-up that can be used to fund your Up account.",
+      "section": "payments"
+    },
+    {
+      "id": "register_up_handle",
+      "title": "Register Up Handle",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Your Up \"username\" that makes it easy to get paid by other Upsiders.",
+      "section": "payments"
+    },
+    {
+      "id": "request_money",
+      "title": "Request Money",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Request money simply and easily from other Upsiders.",
+      "section": "payments"
+    },
+    {
+      "id": "split_bills",
+      "title": "Split Bills",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Split bills easily from a receipt with other Upsiders.",
+      "section": "payments"
+    },
+    {
+      "id": "linked_accounts",
+      "title": "Linked Accounts",
+      "status": "shipped",
+      "desc": "Identify your external accounts in Up.",
+      "section": "payments"
+    },
+    {
+      "id": "bpay",
+      "title": "BPay",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Support for paying bills with BPay.",
+      "section": "payments"
+    },
+    {
+      "id": "up_on_up_payments",
+      "title": "Up on Up Payments",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Enhanced, instant payments to other Upsiders.",
+      "section": "payments"
+    },
+    {
+      "id": "identify_pay",
+      "title": "Identify Pay/Salary",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Identify your incoming Pay/Salary.",
+      "section": "payments"
+    },
+    {
+      "id": "auto_transfer_pay",
+      "title": "Auto Transfer of Pay/Salary",
+      "status": "planned",
+      "estimate": "2019q3",
+      "desc": "Automatically transfer a percentage of your pay to Savers when you get paid.",
+      "section": "payments"
+    },
+    {
+      "id": "search_activity",
+      "title": "Search Activity",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Lightning-fast in-app search of your transactions and activity.",
+      "section": "activity"
+    },
+    {
+      "id": "smart_receipts",
+      "title": "Smart Receipts",
+      "status": "shipped",
+      "desc": "Ability to see enhanced data on receipts. Note: big area that we've only just started.",
+      "section": "activity"
+    },
+    {
+      "id": "afterpay",
+      "title": "Smart Receipts: Afterpay",
+      "status": "shipped",
+      "desc": "Ability to see enhanced data from Afterpay on receipts, including future payments",
+      "section": "activity"
+    },
+    {
+      "id": "merchant_id",
+      "title": "Merchant ID",
+      "status": "shipped",
+      "desc": "Merchant ID system to map your transaction descriptions to real merchants.",
+      "section": "activity"
+    },
+    {
+      "id": "crowdsourced_merchant_id",
+      "title": "Crowdsourced Identification",
+      "status": "shipped",
+      "desc": "Customers can help identify merchants and those suggestions can be propagated to all customers.",
+      "section": "activity"
+    },
+    {
+      "id": "transaction_categoriser",
+      "title": "Transaction Categoriser",
+      "status": "shipped",
+      "desc": "Taxonomy of categories than can be applied to transactions.",
+      "section": "activity"
+    },
+    {
+      "id": "tag_transactions",
+      "title": "Tag Transactions",
+      "status": "in development",
+      "desc": "Ability for customers to tag transactions with their own categories.",
+      "section": "activity"
+    },
+    {
+      "id": "add_notes_attachments",
+      "title": "Add txn notes & attachments",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Ability for customers to add notes or attached photos/files to transactions.",
+      "section": "activity"
+    },
+    {
+      "id": "monthly_insights",
+      "title": "Monthly Insights",
+      "status": "shipped",
+      "desc": "A monthly report on spending and saving insights.",
+      "section": "activity"
+    },
+    {
+      "id": "compare_months",
+      "title": "Compare Months",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Ability to easily compare spending and saving between months.",
+      "section": "activity"
+    },
+    {
+      "id": "location_insights",
+      "title": "Location Insights",
+      "status": "shipped",
+      "desc": "Reports on key locations of spending. Still much more to do on this.",
+      "section": "activity"
+    },
+    {
+      "id": "budgeting",
+      "title": "Budgeting",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Ability to set spending limits on specific categories or across the board.",
+      "section": "activity"
+    },
+    {
+      "id": "spendable_balance",
+      "title": "Spendable Balance",
+      "status": "planned",
+      "estimate": "",
+      "desc": "A balance figure that takes into account the money you have, spending committments and your pay cycle.",
+      "section": "activity"
+    },
+    {
+      "id": "regulars",
+      "title": "Regulars",
+      "status": "shipped",
+      "desc": "Basic detection of regular recurring charges.",
+      "section": "upcoming"
+    },
+    {
+      "id": "regulars_add",
+      "title": "Manually Add Regulars",
+      "status": "in development",
+      "estimate": "2019q2",
+      "desc": "Ability to manually add regular charges to Upcoming.",
+      "section": "upcoming"
+    },
+    {
+      "id": "regulars_edit_delete",
+      "title": "Edit/Delete Regulars",
+      "status": "in development",
+      "estimate": "2019q2",
+      "desc": "Ability to manually edit and delete Regulars.",
+      "section": "upcoming"
+    },
+    {
+      "id": "upcoming_payments",
+      "title": "Upcoming Payments",
+      "status": "shipped",
+      "desc": "Ability to see upcoming scheduled payments.",
+      "section": "upcoming"
+    },
+    {
+      "id": "scheduled_transfers",
+      "title": "Scheduled Transfers",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Ability to see scheduled savings contributions.",
+      "section": "upcoming"
+    },
+    {
+      "id": "create_conversation",
+      "title": "Talk to Us",
+      "status": "shipped",
+      "desc": "Begin an in-app conversation to get help, suggest ideas or file bugs.",
+      "section": "talktous"
+    },
+    {
+      "id": "attach_screenshot",
+      "title": "Attach Screenshot",
+      "status": "shipped",
+      "desc": "Attach a photo or screenshot to a conversation.",
+      "section": "talktous"
+    },
+    {
+      "id": "attach_video",
+      "title": "Attach Video",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Attach a video to a conversation.",
+      "section": "talktous"
+    },
+    {
+      "id": "attach_transaction",
+      "title": "Attach Transaction",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Attach a transaction receipt to a conversation.",
+      "section": "talktous"
+    },
+    {
+      "id": "dispute_transaction",
+      "title": "Dispute Transaction",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Dispute a card payment end-to-end from within the Up app.",
+      "section": "talktous"
+    },
+    {
+      "id": "surveys_updates",
+      "title": "Surveys & Updates",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Support for other kinds of conversations including surveys and updates.",
+      "section": "talktous"
+    },
+    {
+      "id": "ui_iphone",
+      "title": "iPhone App",
+      "status": "shipped",
+      "desc": "Up iPhone application.",
+      "section": "access_data"
+    },
+    {
+      "id": "ui_android",
+      "title": "Android App",
+      "status": "shipped",
+      "desc": "Up Android application.",
+      "section": "access_data"
+    },
+    {
+      "id": "ui_apple_watch",
+      "title": "Apple Watch App",
+      "status": "shipped",
+      "desc": "Up Apple Watch app.",
+      "section": "access_data"
+    },
+    {
+      "id": "ui_tablet",
+      "title": "Apple Tablet App",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Support for using Up with a native iPad app.",
+      "section": "access_data"
+    },
+    {
+      "id": "ui_web",
+      "title": "Up Web Interface",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Support for accessing Up through a web browser.",
+      "section": "access_data"
+    },
+    {
+      "id": "file_exports",
+      "title": "File Exports",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Support for exporting transaction data in a variety of formats.",
+      "section": "access_data"
+    },
+    {
+      "id": "oauth_read",
+      "title": "OAuth API (read only)",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Initial support for an open read-only API using OAuth to authenticate.",
+      "section": "access_data"
+    },
+    {
+      "id": "open_banking",
+      "title": "Open Banking Support",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Support for the Australian Open Banking standards (once they arrive).",
+      "section": "access_data"
+    },
+    {
+      "id": "oauth_write",
+      "title": "OAuth API (write)",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Support for full control of your Up account via an API.",
+      "section": "access_data"
+    },
+    {
+      "id": "realtime_webhooks",
+      "title": "Real-time Webhooks",
+      "status": "planned",
+      "estimate": "",
+      "desc": "Support for ability to have Up notify your application in real-time of events.",
+      "section": "access_data"
+    }
+  ]
+}
