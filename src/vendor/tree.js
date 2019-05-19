@@ -1,13 +1,13 @@
 /* eslint-disable */
 /*! jQuery v3.2.1 | (c) JS Foundation and other contributors | jquery.org/license */
 function beginPinch(e) {
-  console.log("TCL: beginPinch -> e", e);
+  // console.log("TCL: beginPinch -> e", e);
   pinch_scale = currentPos.scale;
   e.preventDefault();
 }
 
 function doPinch(e) {
-  console.log("TCL: doPinch -> e", e);
+  // console.log("TCL: doPinch -> e", e);
   zoomOnPointWithScale(
     viewport.width / 2,
     viewport.height / 2,
@@ -18,7 +18,7 @@ function doPinch(e) {
 
 //
 function beginDrag(e) {
-  console.log("TCL: beginDrag -> e", e);
+  // console.log("TCL: beginDrag -> e", e);
   try {
     (last_coord = first_coord = {
       x: e.pageX ? e.pageX : e.touches[0].pageX,
@@ -27,7 +27,7 @@ function beginDrag(e) {
       (dragging = true),
       e.preventDefault();
   } catch (error) {
-    console.log("TCL: beginDrag -> error", error);
+    // console.log("TCL: beginDrag -> error", error);
   }
 }
 
@@ -62,63 +62,27 @@ function doDrag(e) {
       let zoomScale = currentPos.scale;
       let imageWidth = currentPos.swidth;
       let imageHeight = currentPos.sheight;
-      let imageOffset = currentPos.x;
+      let popupPos = $("#popup").position();
 
-      console.log("imageWidth:", imageWidth);
-      console.log("zoomScale:", zoomScale);
-      console.log("screenWidth:", screenWidth);
-      console.log("imageOffset:", imageOffset);
+      let imageOffset = {
+        x: currentPos.x,
+        y: currentPos.y
+      };
 
-      //TODO: Make sure to catch all conditions
-      // if (imageWidth * zoomScale > screenWidth) {
-      //   console.warn(
-      //     "TCL: doDrag -> imageWidth * zoomScale",
-      //     imageWidth * zoomScale
-      //   );
+      //update location of popup
+      $("#popup").css({ left: popupPos.left + n.x, top: popupPos.top + n.y });
 
-      //   if (imageOffset > 0) {
-      //     console.warn(
-      //       "TCL: doDrag -> imageWidth * zoomScale",
-      //       imageWidth * zoomScale
-      //     );
-      //     currentPos.x = 0;
-      //   }
-      //   if (imageOffset + imageWidth * zoomScale < screenWidth) {
-      //     currentPos.x = screenWidth - imageWidth * zoomScale;
-      //   }
-      // } else if (imageOffset < 0) {
-      //   currentPos.x = 0;
-      //   if (imageOffset + imageWidth * zoomScale > screenWidth) {
-      //     currentPos.x = screenWidth - imageWidth * zoomScale;
-      //   }
-      // }
-
-      // if (imageHeight * zoomScale > screenHeight) {
-      //   if (currentPos.y > 0) {
-      //     currentPos.y = 0;
-      //     if (currentPos.y + imageHeight * zoomScale < screenHeight) {
-      //       currentPos.y = screenHeight - imageHeight * zoomScale;
-      //     }
-      //   }
-      // } else {
-      //   if (currentPos.y < 0) {
-      //     currentPos.y = 0;
-      //     if (currentPos.y + imageHeight * zoomScale > screenHeight) {
-      //       currentPos.y = screenHeight - imageHeight * zoomScale;
-      //     }
-      //   }
-      // }
-
-      $(svg).css({ left: currentPos.x, top: currentPos.y });
+      // Update location of svg
+      $(svg).css({ left: imageOffset.x, top: imageOffset.y });
       e.preventDefault();
     } catch (error) {
-      console.log("TCL: doDrag -> error", error);
+      console.error(error);
     }
   }
 }
 
 function endDrag(e) {
-  console.log("TCL: endDrag -> e", e);
+  // console.log("TCL: endDrag -> e", e);
   dragging = false;
   if (!currentPos.nohide) {
     $("#popup").hide();
@@ -143,7 +107,7 @@ function zoomOnPoint(e) {
 }
 
 function zoomOnPointWithScale(e, t, n) {
-  console.log("zoomScale:", currentPos.scale);
+  // console.log("zoomScale:", currentPos.scale);
   n < currentPos.min_scale && (n = currentPos.min_scale),
     n > currentPos.max_scale && (n = currentPos.max_scale);
   var o = e - ((e - currentPos.x) / currentPos.scale) * n,
@@ -176,11 +140,18 @@ function renderCard(card) {
 }
 
 function getCard(cards, e) {
+  console.log("TCL: getCard");
   for (let index = 0; index < cards.length; index++) {
     const element = cards[index];
-    if (e.toLowerCase() == element.id.toLowerCase()) {
-      console.log("TCL: getCard -> element", element);
-      return element;
+    try {
+      console.error(e);
+
+      if (e.toLowerCase() == element.id.toLowerCase()) {
+        console.log("TCL: getCard -> element", element);
+        return element;
+      }
+    } catch (error) {
+      console.error(error);
     }
   }
 }
@@ -238,15 +209,15 @@ export function main(items) {
   //   currentPos.min_scale = u;
   // }
   currentPos.min_scale = currentPos.min_scale / 2;
-  console.log("TCL: main -> currentPos.min_scale", currentPos.min_scale);
+  // console.log("TCL: main -> currentPos.min_scale", currentPos.min_scale);
 
   currentPos.x = (viewport.width - a * width) / 2;
   svg.css("left", currentPos.x);
-  console.log("TCL: main -> currentPos.x", currentPos.x);
+  // console.log("TCL: main -> currentPos.x", currentPos.x);
   svg.css("width", a * width);
-  console.log("TCL: main -> a * width", a * width);
+  // console.log("TCL: main -> a * width", a * width);
   svg.css("height", a * height);
-  console.log("TCL: main -> a * height", a * height);
+  // console.log("TCL: main -> a * height", a * height);
 
   viewer.on("mouseup touchend", endDrag);
   viewer.on("mousemove touchmove", doDrag);
@@ -257,42 +228,61 @@ export function main(items) {
   viewer.on("gesturechange", doPinch);
   viewer.on("wheel", doWheel);
 
-  // svg.mousedown(function() {
-  //   console.log("Handler for .mousedown() called.");
-  // });
+  //TODO: Need to fix the logging around clicking on an svg element and checking for id
+  $("path").on("click", function(event) {
+    let id = $(this).attr("id");
+    console.log("TCL: main -> id", id);
 
-  // svg.mouseup(function() {
-  //   console.log("Handler for .mouseup() called.");
-  // });
-
-  $(".close").on("touchend mouseup", function(event) {
-    console.error("TCL: main -> event", event);
-    return (
-      $(this)
-        .parent()
-        .removeClass("show"),
-      event.preventDefault(),
-      event.stopPropagation(),
-      false
-    );
-  });
-
-  $("svg .feature").on("click touchend", function(event) {
-    console.log("TCL: feature.onClick -> event", event);
     event.preventDefault();
     event.stopPropagation();
 
+    //No idea what this is...
     var t = {
       x: last_coord.x - first_coord.x,
       y: last_coord.y - first_coord.y
     };
 
-    return (
-      !(Math.abs(t.x) > 2 || Math.abs(t.y) > 2) &&
-        renderCard(getCard(cards, $(this).attr("id"))),
-      $("#popup")
-        .css({ left: last_coord.x - 10, top: last_coord.y - 180 })
-        .show()
-    );
+    if (id) {
+      if (!(Math.abs(t.x) > 2 || Math.abs(t.y) > 2)) {
+        let card = getCard(cards, id);
+        if (card != null) {
+          renderCard(card);
+          $("#popup")
+            .css({ left: last_coord.x - 10, top: last_coord.y - 180 })
+            .show();
+        } else {
+          console.log("No card for this click");
+        }
+      }
+    }
+  });
+
+  //TODO: Work on how to better implement
+  $("svg .feature").on("click", function(event) {
+    let id = $(this).attr("id");
+    console.log("TCL: main -> id", id);
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    //No idea what this is...
+    var t = {
+      x: last_coord.x - first_coord.x,
+      y: last_coord.y - first_coord.y
+    };
+
+    if (id) {
+      if (!(Math.abs(t.x) > 2 || Math.abs(t.y) > 2)) {
+        let card = getCard(cards, id);
+        if (card != null) {
+          renderCard(card);
+          $("#popup")
+            .css({ left: last_coord.x - 10, top: last_coord.y - 180 })
+            .show();
+        } else {
+          console.log("No card for this click");
+        }
+      }
+    }
   });
 }

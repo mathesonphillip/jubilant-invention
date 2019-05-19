@@ -2,16 +2,16 @@
 const $ = window.$;
 import React from "react";
 
-// import { ReactComponent as Icon } from "./roadmap1.svg";
-// import items from "./items.json";
+// Switch images here by commenting out one of the import blocks
+// ######################################################
 
-import { ReactComponent as Icon } from "./Behance.svg";
-// import { ReactComponent as Icon } from "./treeOfUp.svg";
-import items from "./items.json";
+import { ReactComponent as Icon } from "./svg/education.svg";
+import items from "./data/education.json";
 
-// import { ReactComponent as Icon } from "./drawing.svg";
-// import items from "./items2.json";
+// import { ReactComponent as Icon } from "./svg/roadmap.svg";
+// import items from "./data/roadmap.json";
 
+// ######################################################
 import { main } from "./vendor/tree";
 import "./styles.css";
 class App extends React.Component {
