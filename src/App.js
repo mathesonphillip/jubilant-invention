@@ -12,7 +12,7 @@ import items from "./data/education.json";
 // import items from "./data/roadmap.json";
 
 // ######################################################
-import { main } from "./vendor/tree";
+import { main } from "./vendor/svg";
 import "./styles.css";
 class App extends React.Component {
   componentDidMount() {
@@ -20,7 +20,6 @@ class App extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
     return (
       <React.Fragment>
         <div id="popup" />
