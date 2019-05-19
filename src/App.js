@@ -5,8 +5,11 @@ import React from "react";
 // Switch images here by commenting out one of the import blocks
 // ######################################################
 
-import { ReactComponent as Icon } from "./svg/education.svg";
-import items from "./data/education.json";
+// import { ReactComponent as Icon } from "./svg/education.svg";
+// import items from "./data/education.json";
+
+import { ReactComponent as Icon } from "./svg/infographic.svg";
+import items from "./data/infographic.json";
 
 // import { ReactComponent as Icon } from "./svg/roadmap.svg";
 // import items from "./data/roadmap.json";
